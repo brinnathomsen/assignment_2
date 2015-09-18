@@ -10,7 +10,7 @@ function draw() {
 	var weather = random(100);
 
 	// DRAW SKY AND WATER
-	if (weather > 80) {
+	if (weather > 70) {
 		// Dreery Scene
 		var colorDreerySky = color(229, 240, 246);
 		fill(colorDreerySky);
@@ -21,7 +21,7 @@ function draw() {
 		rect(0, 200, 640, 200);}
 
 
-	else if (weather > 60) {
+	else if (weather > 50) {
 		// Sunny Scene
 		var colorSunnySky = color(220, 245, 249);
 		fill(colorSunnySky);
@@ -31,7 +31,7 @@ function draw() {
 		fill(colorSunnyWater);
 		rect(0, 200, 640, 200);}
 
-	else if (weather > 40) {
+	else if (weather > 20) {
 		// Sunset Scene
 		var colorSunsetSky = color(242, 177, 145);
 		fill(colorSunsetSky);
@@ -273,24 +273,22 @@ function draw() {
 		rect (440, 100, 40, 90);}
 
 
+
 	// BOAT
+
+	var boatLocation;
+	boatLocation = random(-100, 100);
 	var colorBoat = color(247, 61, 62);
 	fill (colorBoat);
-	arc(320, 240, 80, 80, 0, PI, OPEN);
-
-	fill (colorBoat);
-	rect(298, 263, 45, 10);
-
-
+	arc(320 + boatLocation, 240, 80, 80, 0, PI, OPEN);
 	// Mast and Sail
 	fill (colorBoat);
-	rect(330, 180, 5, 70);
-
+	rect(330 + boatLocation, 180, 5, 70);
 
 	var colorSail = color(255, 255, 255);
 	fill (colorSail);
-	triangle (328, 180, 328, 235, 280, 235);
-	triangle (338, 195, 338, 235, 360, 235);
+	triangle (328 + boatLocation, 180, 328 + boatLocation, 235, 280 + boatLocation, 235);
+	triangle (338 + boatLocation, 195, 338 + boatLocation, 235, 360 + boatLocation, 235);
 
 
 
@@ -298,20 +296,20 @@ function draw() {
 	if (weather > 80) {
 		var colorDreeryWater = color(221, 234, 243);
 		fill(colorDreeryWater)
-		rect(290, 270, 65, 10);}
+		rect(290 + boatLocation, 270, 65, 10);}
 
 	else if (weather > 60) {
 		var colorSunnyWater = color(142, 184, 220);
 		fill(colorSunnyWater);
-		rect(290, 270, 65, 10);}
+		rect(290 + boatLocation, 270, 65, 10);}
 
 	else if (weather > 40) {
 		fill(colorSunsetWater);
-		rect(290, 270, 65, 10);}
+		rect(290 + boatLocation, 270, 65, 10);}
 
 	else if (weather > 0) {
 		fill(colorNightWater);
-		rect(290, 270, 65, 10);}
+		rect(290 + boatLocation, 270, 65, 10);}
 
 
   // Snow
