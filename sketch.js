@@ -293,17 +293,17 @@ function draw() {
 
 
 	// Water for the Boat
-	if (weather > 80) {
+	if (weather > 70) {
 		var colorDreeryWater = color(221, 234, 243);
 		fill(colorDreeryWater)
 		rect(290 + boatLocation, 270, 65, 10);}
 
-	else if (weather > 60) {
+	else if (weather > 50) {
 		var colorSunnyWater = color(142, 184, 220);
 		fill(colorSunnyWater);
 		rect(290 + boatLocation, 270, 65, 10);}
 
-	else if (weather > 40) {
+	else if (weather > 20) {
 		fill(colorSunsetWater);
 		rect(290 + boatLocation, 270, 65, 10);}
 
