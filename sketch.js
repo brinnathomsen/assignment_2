@@ -9,25 +9,20 @@ function draw() {
 
 	var weather = random(100);
 
-	// DRAW SKY
+	// DRAW SKY AND WATER
 	if (weather > 80) {
+		// Dreery Scene
 		var colorDreerySky = color(229, 240, 246);
 		fill(colorDreerySky);
 		rect(0, 0, 640, 360);
 
 		var colorDreeryWater = color(221, 234, 243);
 		fill(colorDreeryWater);
-		rect(0, 200, 640, 200);
-
-		fill (156, 163, 175);
-		ellipse(200, 100, 50, 30);
-		ellipse(230, 90, 70, 30);
-		ellipse(250, 85, 30, 40);
-		ellipse(260, 100, 70, 30);}
-
+		rect(0, 200, 640, 200);}
 
 
 	else if (weather > 60) {
+		// Sunny Scene
 		var colorSunnySky = color(220, 245, 249);
 		fill(colorSunnySky);
 		rect(0, 0, 640, 360);
@@ -37,24 +32,26 @@ function draw() {
 		rect(0, 200, 640, 200);}
 
 	else if (weather > 40) {
+		// Sunset Scene
 		var colorSunsetSky = color(242, 177, 145);
 		fill(colorSunsetSky);
 		rect(0, 0, 640, 360);
 
 		var colorSunsetSun = color(254, 238, 129);
 		fill(colorSunsetSun);
-		ellipse(200, 100, 30, 30);
+		ellipse(200, 70, 30, 30);
 
 		var colorSunsetWater = color (239, 168, 178);
 		fill(colorSunsetWater);
 		rect(0, 200, 640, 200);}
 
 	else if (weather > 0) {
+		// Night Scene
 		var colorNightSky = color(7, 51, 124);
 		fill (colorNightSky);
 		rect(0, 0, 640, 360);
 
-		var colorNightWater = color(7, 51, 124);
+		var colorNightWater = color(15, 61, 114);
 		fill(colorNightWater);
 		rect(0, 200, 640, 200);
 
@@ -114,24 +111,23 @@ function draw() {
 
 
 		// LANDSCAPES
-
-
-	// DRAW ROCKY CLIFFS
-
 	var landscapes = random(10);
 
+	// Rocky Cliffs
+
 	if (landscapes > 8) {
-	// Draw Cliffs
+	// Background Cliffs
 	var colorBackCliffs = color(73, 80, 89);
 	fill(colorBackCliffs);
 	triangle (-100, 200, 90, 160, 200, 200);
 	triangle (50, 200, 180, 160, 400, 200);
-
+	// Foreground Cliffs
 	var colorForeCliffs = color(64, 73, 89);
 	fill(colorForeCliffs);
 	triangle (380, 230, 510, 170, 700, 230);
 	triangle (510, 170, 640, 170, 700, 250);
 
+	// Lighthouse
 	fill (255, 255, 255);
 	quad(520, 180, 535, 80, 565, 80, 580, 180);
 	fill (0, 0, 0);
@@ -143,10 +139,9 @@ function draw() {
 	fill (127, 156, 172);
 	quad(535, 40, 535, 60, 565, 60, 565, 40);}
 
+	// Mountains
 
 	else if (landscapes > 5) {
-
-	// DRAW MOUNTAINS
 	// background mountains
 	var colorBackMountains = color(198, 220, 235);
 	fill(colorBackMountains);
@@ -180,9 +175,7 @@ function draw() {
 	triangle (430, 200, 500, 90, 650, 200);
 	triangle (500, 200, 600, 120, 700, 200);
 
-
-	// DRAW LAND
-	// background land and trees
+	// Background Land and Trees
 	// left
 	var colorBackLand = color(4, 36, 77);
 	fill (colorBackLand);
@@ -197,7 +190,7 @@ function draw() {
 	triangle (410, 200, 560, 170, 700, 200);
 	triangle (445, 195, 455, 150, 465, 195);
 
-	// foreground land and trees
+	// Foreground Land and Trees
 	var colorForeLand = color(7, 27, 62);
 	fill (colorForeLand);
 	triangle (410, 320, 560, 270, 700, 320);
@@ -207,8 +200,9 @@ function draw() {
 	rect(595, 250, 20, 50);
 	rect(495, 250, 10, 50);}
 
+
  else if (landscapes > 3){
-	// JUNGLE SCENE
+	// Forest
 	var colorForeMountains = color(37, 77, 136);
 	fill (colorForeMountains);
 	triangle (-200, 200, 280, 100, 350, 200);
@@ -247,6 +241,7 @@ function draw() {
 	ellipse(300, 200, 8, 8);}
 
 	else if (landscapes > 0){
+		// City Skyline
 	var colorBackMountains = color(198, 220, 235);
 	fill(colorBackMountains);
 	rect (15, 80, 30, 120);
@@ -278,23 +273,16 @@ function draw() {
 		rect (440, 100, 40, 90);}
 
 
-
-
-
-
-	// DRAW BOAT
-	// body
+	// BOAT
 	var colorBoat = color(247, 61, 62);
 	fill (colorBoat);
 	arc(320, 240, 80, 80, 0, PI, OPEN);
-
-
 
 	fill (colorBoat);
 	rect(298, 263, 45, 10);
 
 
-	// draw mast and sail
+	// Mast and Sail
 	fill (colorBoat);
 	rect(330, 180, 5, 70);
 
@@ -305,6 +293,8 @@ function draw() {
 	triangle (338, 195, 338, 235, 360, 235);
 
 
+
+	// Water for the Boat
 	if (weather > 80) {
 		var colorDreeryWater = color(221, 234, 243);
 		fill(colorDreeryWater)
@@ -319,18 +309,9 @@ function draw() {
 		fill(colorSunsetWater);
 		rect(290, 270, 65, 10);}
 
-
-
 	else if (weather > 0) {
-		var colorNightWater = color(18, 53, 91);
 		fill(colorNightWater);
 		rect(290, 270, 65, 10);}
-
-
-
-
-
-
 
 
   // Snow
