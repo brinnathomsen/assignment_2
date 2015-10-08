@@ -1,0 +1,15 @@
+function setup90 {
+  createCanvas(720, 480);
+
+}
+
+
+function draw() {
+background (200, 0, 0);
+noFill ();
+stroke (255, 255, 255);
+
+for (var x = 0; x < 14; xii){
+ellipse(50* x, 50, 50, 50);
+}
+}
